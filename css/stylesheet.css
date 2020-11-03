@@ -17,3 +17,8 @@
 .contentContainer{
     text-align:center;
 }
+
+/*Body*/
+body p{
+margin: 0;
+}
