@@ -10,12 +10,6 @@ document.getElementById("header").innerHTML = `<header>
   <li class="nav-item active">
     <a class="nav-link" href="http://127.0.0.1:5500/studious-octo-adventure/">Home <span class="sr-only">(current)</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Features</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Pricing</a>
-  </li>
 </ul>
 <span class="navbar-text">
   Made by Vattenkruka
