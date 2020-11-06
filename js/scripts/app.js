@@ -8,6 +8,7 @@ document.getElementById("laptopOption").addEventListener("change", function () {
 document.getElementById("work-btn").addEventListener("click", work);
 document.getElementById("bank-btn").addEventListener("click", depositWage);
 document.getElementById("loan-btn").addEventListener('click', getLoan);
+document.getElementById('buy-btn').addEventListener('click', buyComputer);
 
 /*All getElementsById */
 
@@ -29,6 +30,7 @@ let price = 0;
 
 /*Functions */
 
+// Function which adds options to the dropdownlist based on the featuredLaptop list
 function addLaptopInfo() {
     const docfrag = document.createDocumentFragment();
     for (let i = 0; i < featuredLaptops.length; i++) {
@@ -36,22 +38,26 @@ function addLaptopInfo() {
     }
     select.appendChild(docfrag);
 }
-
+// Function which changes the layout depending on which laptop is chosen in the 
+// dropdown list
 function changeInfo(laptopValue) {
     featureDescriptionElement.innerHTML = featuredLaptops[laptopValue].featureList;
     laptopPriceElement.innerHTML = featuredLaptops[laptopValue].price + " SEK";
+    price = featuredLaptops[laptopValue].price;
     laptopNameElement.innerHTML = featuredLaptops[laptopValue].name;
     laptopDescriptionElement.innerHTML = featuredLaptops[laptopValue].description;
     laptopImageUrlElement.innerHTML = ` <img src="${featuredLaptops[laptopValue].imageUrl}" class="imageStyle" alt="A picture of a laptop">
     `
+
     //FIX if case for value undefined
 }
-
+//Function to add money to the earnings for the work. 100 SEK for each click.
 function work() {
     userEarnings = parseInt(userEarnings) + parseInt(wage);
     userEarningsElement.innerHTML = "Pay: " + userEarnings + " SEK";
 }
 
+// Function which deposits the earnings to the bank account
 function depositWage() {
     userBalance = parseInt(userBalance) + parseInt(userEarnings);
     userEarnings = 0;
@@ -59,6 +65,7 @@ function depositWage() {
     userEarningsElement.innerHTML = "Pay: " + userEarnings + " SEK";
 }
 
+// Function which handles the user interaction for loans
 function getLoan() {
     if (loanAmount > 0) {
         alert("You have already loaned once, work for more and buy a computer before you loan more money.")
@@ -81,10 +88,18 @@ function getLoan() {
 
 }
 
+//Function which handles the user interaction for buying a computer
 function buyComputer() {
-
+    // Checks if balance is higher or equal to price.
+    if (userBalance >= price) {
+        userBalance = parseInt(userBalance) - parseInt(price);
+        userBalanceElement.innerHTML = "Balance: " + userBalance + " SEK";
+        loanAmount = 0;
+        alert("Congratulations! You just bought a new laptop!");
+    }
+    else {
+        alert("Insufficient funds..! Work for more money or loan to be able to fund the purchase!")
+    }
 }
-
-
 
 addLaptopInfo();
