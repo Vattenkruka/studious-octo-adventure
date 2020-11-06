@@ -1,6 +1,6 @@
 # Komputer Store
 ### About the Project
-An application which displays several computers and let interact with certain function such as work and loan in order to purchase computers.
+An application which displays several computers and let a user interact with certain function such as work and loan in order to purchase computers.
 
 ## Getting started
 
