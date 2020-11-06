@@ -1,0 +1,44 @@
+/*FOOTER */
+
+.footer{
+    background-color: #212529;
+    color:white;
+}
+/*Top right div for features */
+.featuresView{
+    max-width:50%;
+    margin:auto;
+}
+/*CONTAINERS */
+
+/* FLEXBOX CONTAINER for content */ 
+.flexboxContainer{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:100%;
+    
+}
+/*Container for contentContainer */
+.contentContainer{
+    text-align:center;
+}
+
+/*Container for laptop information at lower part of page */
+.laptopContainer{
+    margin:auto;
+    text-align:center;
+    width:90%;
+    justify-content: center;
+}
+
+/*Body*/
+body p{
+margin: 0;
+}
+
+/*Laptop image */
+.imageStyle{
+width:200px;
+height: auto;
+}
+

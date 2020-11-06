@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputer Store</title>
+    <meta name="description" content="A web application which resembles a simple computer store">
+    <meta name="Author" content="Vattenkruka">
+    <link rel="icon" href="#">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!--Partial scripts-->
+    <script type="module" src="js/partials/header.js"></script>
+    <script type="module" src="js/partials/footer.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contentContainer" class="text-center">
+        <div class="flexboxContainer d-inline-flex">
+            <div class=" p-2 align-items-center">
+                <h4>John Doe's Bank</h4>
+                <p id="userBalance"></p>
+                <button id="loan-btn" class="btn btn-info">Get a loan</button>
+            </div>
+            <div class="p-2 align-items-center">
+                <h4>Work</h4>
+                <p id="userEarnings"></p>
+                <div>
+                    <button id="bank-btn" class="btn btn-warning">Bank</button>
+                    <button id="work-btn" class="btn btn-primary">Work</button>
+                </div>
+            </div>
+            <div class="p-2 align-items-center" id="laptopContainer">
+                <h4>Laptops</h4>
+                <div class="dropdown">
+                    <select name="Laptops" id="laptopOption">
+                        <option value="undefined">Choose a laptop</option>
+                    </select>
+                </div>
+            </div><div>
+                <div class="featuresView">
+            <h4 id="headerFeatures" class="invisible">Features:</h4>
+            <p class="text-center " id="laptopFeatureDescription"></p>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="laptopContainer d-inline-flex">
+        <div class="p-2 align-items-center">
+            <div id="image"></div>
+        </div>
+        <div class="p-2 align-items-center">
+            <h2 id="laptopName"></h2>
+            <p id="laptopDescription"></p>
+        </div>
+        <div class="p-2 align-items-center">
+            <h3 id="laptopPrice"></h3>
+            <button id="buy-btn" class="btn btn-success invisible">BUY NOW</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="footer"></div>
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/scripts/app.js"></script>
+</body>
+
+</html>
