@@ -45,14 +45,11 @@ function changeInfo(laptopValue) {
     console.log(laptopValue)
     //if-case for value undefined
     if (laptopValue === 'undefined') {
-        document.getElementById('laptopFeatureDescription').style.display = "none";
-        document.getElementById('laptopPrice').style.display = "none";
-        document.getElementById('laptopName').style.display = "none";
-        document.getElementById('laptopDescription').style.display = "none";
-        document.getElementById('image').style.display = "none";
+        displayNoBlocks();
     }
     //otherwise show information for laptops
     else {
+        displayBlocks();
         featureDescriptionElement.innerHTML = (featuredLaptops[laptopValue]).featureList;
         laptopPriceElement.innerHTML = featuredLaptops[laptopValue].price + " SEK";
         price = featuredLaptops[laptopValue].price;
@@ -113,5 +110,22 @@ function buyComputer() {
         alert("Insufficient funds..! Work for more money or loan to be able to fund the purchase!")
     }
 }
+
+function displayBlocks() {
+    document.getElementById('laptopFeatureDescription').style.display = "block";
+    document.getElementById('laptopPrice').style.display = "block";
+    document.getElementById('laptopName').style.display = "block";
+    document.getElementById('laptopDescription').style.display = "block";
+    document.getElementById('image').style.display = "block";
+}
+
+function displayNoBlocks() {
+    document.getElementById('laptopFeatureDescription').style.display = "none";
+    document.getElementById('laptopPrice').style.display = "none";
+    document.getElementById('laptopName').style.display = "none";
+    document.getElementById('laptopDescription').style.display = "none";
+    document.getElementById('image').style.display = "none";
+}
+
 
 addLaptopInfo();
