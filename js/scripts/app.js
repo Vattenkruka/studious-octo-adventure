@@ -41,15 +41,27 @@ function addLaptopInfo() {
 // Function which changes the layout depending on which laptop is chosen in the 
 // dropdown list
 function changeInfo(laptopValue) {
-    featureDescriptionElement.innerHTML = featuredLaptops[laptopValue].featureList;
-    laptopPriceElement.innerHTML = featuredLaptops[laptopValue].price + " SEK";
-    price = featuredLaptops[laptopValue].price;
-    laptopNameElement.innerHTML = featuredLaptops[laptopValue].name;
-    laptopDescriptionElement.innerHTML = featuredLaptops[laptopValue].description;
-    laptopImageUrlElement.innerHTML = ` <img src="${featuredLaptops[laptopValue].imageUrl}" class="imageStyle" alt="A picture of a laptop">
-    `
 
-    //FIX if case for value undefined
+    console.log(laptopValue)
+    //if-case for value undefined
+    if (laptopValue === 'undefined') {
+        document.getElementById('laptopFeatureDescription').style.display = "none";
+        document.getElementById('laptopPrice').style.display = "none";
+        document.getElementById('laptopName').style.display = "none";
+        document.getElementById('laptopDescription').style.display = "none";
+        document.getElementById('image').style.display = "none";
+    }
+    //otherwise show information for laptops
+    else {
+        featureDescriptionElement.innerHTML = (featuredLaptops[laptopValue]).featureList;
+        laptopPriceElement.innerHTML = featuredLaptops[laptopValue].price + " SEK";
+        price = featuredLaptops[laptopValue].price;
+        laptopNameElement.innerHTML = featuredLaptops[laptopValue].name;
+        laptopDescriptionElement.innerHTML = featuredLaptops[laptopValue].description;
+        laptopImageUrlElement.innerHTML = ` <img src="${featuredLaptops[laptopValue].imageUrl}" class="imageStyle" alt="A picture of a laptop">
+    `
+    }
+
 }
 //Function to add money to the earnings for the work. 100 SEK for each click.
 function work() {
