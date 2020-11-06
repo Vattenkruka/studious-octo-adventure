@@ -42,7 +42,6 @@ function addLaptopInfo() {
 // dropdown list
 function changeInfo(laptopValue) {
 
-    console.log(laptopValue)
     //if-case for value undefined
     if (laptopValue === 'undefined') {
         displayNoBlocks();
@@ -117,6 +116,8 @@ function displayBlocks() {
     document.getElementById('laptopName').style.display = "block";
     document.getElementById('laptopDescription').style.display = "block";
     document.getElementById('image').style.display = "block";
+    document.getElementById('buy-btn').classList.remove("invisible");
+    document.getElementById('headerFeatures').classList.remove('invisible');
 }
 
 function displayNoBlocks() {
@@ -125,6 +126,8 @@ function displayNoBlocks() {
     document.getElementById('laptopName').style.display = "none";
     document.getElementById('laptopDescription').style.display = "none";
     document.getElementById('image').style.display = "none";
+    document.getElementById('buy-btn').classList.add("invisible");
+    document.getElementById('headerFeatures').classList.add('invisible');
 }
 
 

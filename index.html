@@ -20,9 +20,7 @@
 
 <body>
     <div id="header"></div>
-
     <div id="contentContainer" class="text-center">
-
         <div class="flexboxContainer d-inline-flex">
             <div class=" p-2 align-items-center">
                 <h4>John Doe's Bank</h4>
@@ -42,14 +40,14 @@
                 <div class="dropdown">
                     <select name="Laptops" id="laptopOption">
                         <option value="undefined">Choose a laptop</option>
-
                     </select>
-
                 </div>
-            </div>
-            <h4>Features:</h4>
-            <p id="laptopFeatureDescription"></p>
-
+            </div><div>
+                <div class="featuresView">
+            <h4 id="headerFeatures" class="invisible">Features:</h4>
+            <p class="text-center " id="laptopFeatureDescription"></p>
+        </div>
+        </div>
         </div>
     </div>
     <div></div>
@@ -63,14 +61,11 @@
         </div>
         <div class="p-2 align-items-center">
             <h3 id="laptopPrice"></h3>
-            <button id="buy-btn" class="btn btn-success">BUY NOW</button>
+            <button id="buy-btn" class="btn btn-success invisible">BUY NOW</button>
         </div>
-
     </div>
     </div>
-
     </div>
-
     <div id="footer"></div>
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
