@@ -13,8 +13,12 @@ git clone https://github.com/Vattenkruka/studious-octo-adventure.git
 3. Run it by using the plugin live server.
 
 ## Usage
+#### Initial page:
+![Initial Page](https://github.com/Vattenkruka/studious-octo-adventure/blob/main/public/images/firstpage.PNG)
 
+#### Page once a laptop has been selected:
 
+![Page once a laptop has been selected](https://github.com/Vattenkruka/studious-octo-adventure/blob/main/public/images/secondpage.PNG)
 ## Author
 
 [Oscar Dahlquist](https://github.com/Vattenkruka)
